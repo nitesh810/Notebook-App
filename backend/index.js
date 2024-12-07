@@ -6,6 +6,8 @@ connectToMongo();
 const app = express();
 const port = 3300;
 
+app.use(express.json());
+
 app.use('/auth', auth);
 
 app.listen(port, () => {
